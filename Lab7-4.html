@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function countTheWord(str) {
+
+            var numWords = 0;
+
+            for (var i = 0; i < str.length; i++) {
+                var currentCharacter = str[i];
+                
+                if (currentCharacter == 't'||currentCharacter == 'T') 
+                {
+                    currentCharacter = str[i+1];
+                    if (currentCharacter == 'h')
+                    {
+                        currentCharacter = str[i+2];
+                        if (currentCharacter == 'e')
+                        {
+                            numWords = numWords + 1;
+                        }
+                    }
+                }
+            }
+
+            alert("มี The ทั้งหมด " + numWords + " คำ");
+        }
+    </script>
+</head>
+<body>
+    The eight ruler of the Fifth Dynasty in the late 25th century.<br><br>
+    <a href="#" onclick="countTheWord('The eight ruler of the Fifth Dynasty in the late 25th century')">Click for count 'the'</a>
+</body>
+</html>
